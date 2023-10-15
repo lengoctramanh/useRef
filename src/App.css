@@ -1,0 +1,10 @@
+.btn {
+    display: flex;
+    gap: 30px;
+}
+.Test-3,
+.test-4 {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
