@@ -8,3 +8,15 @@
     flex-direction: column;
     margin-top: 50px;
 }
+.test-5 {
+    margin-top: 60px;
+}
+.test-6 {
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
+}
+#test-6-btn {
+    width: 80px;
+    height: 30px;
+}

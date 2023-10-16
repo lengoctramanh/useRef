@@ -1,4 +1,4 @@
-import { Fragment,useEffect, useRef, useState } from "react";
+import { Fragment, useEffect, useRef, useState } from "react";
 
 const Test1 = () => {
   const [count, setCount] = useState(0);
@@ -50,14 +50,16 @@ const Test1 = () => {
   useEffect(() => {
     //  // Thực hiện các tác vụ khi  Test1 được render
     return () => {
-        {/**trong return thực hiện các tác vụ khi Test1 bị unmount hoặc thay đổi 
-    nghĩa là trang Test 1 rớt ra khỏi cây DOM*/}
-        clearInterval(StartCount.current);
-    }
-   /** đảm bảo rằng interval sẽ luôn được dừng khi component bị unmount hoặc thay đổi, 
-    * ngay cả khi người dùng chuyển sang một chỗ khác. 
-    * Tránh việc tiêu tốn tài nguyên không cần thiết  
-    * useEffect sẽ được kích hoạt và gọi hàm trả về. */
+      {
+        /**trong return thực hiện các tác vụ khi Test1 bị unmount hoặc thay đổi 
+    nghĩa là trang Test 1 rớt ra khỏi cây DOM*/
+      }
+      clearInterval(StartCount.current);
+    };
+    /** đảm bảo rằng interval sẽ luôn được dừng khi component bị unmount hoặc thay đổi,
+     * ngay cả khi người dùng chuyển sang một chỗ khác.
+     * Tránh việc tiêu tốn tài nguyên không cần thiết
+     * useEffect sẽ được kích hoạt và gọi hàm trả về. */
   }, []);
 
   return (
