@@ -1,0 +1,23 @@
+.btn {
+    display: flex;
+    gap: 30px;
+}
+.Test-3,
+.test-4 {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+.test-5 {
+    margin-top: 60px;
+}
+.test-6 {
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
+}
+#test-6-btn {
+    width: 100px;
+    height: 50px;
+    
+}
