@@ -12,7 +12,7 @@ quay lại chữ cái bắt đầu */}
     const sizeRef=useRef()
     useEffect(()=> {
         sizeRef.current.focus()
-    })
+    },[])
     const handleValueInput=(e)=> {
         setSize(e.target.value)
     }

@@ -4,6 +4,7 @@ const Test3 = () => {
     const [valueInput,setValueInput]=useState("")
     const input=useRef()
     useEffect(()=> {
+        /**Làm border ô tự động nháy lên khi reload lại trang */
         input.current.focus()
     },[])
     const handleClear=()=>{

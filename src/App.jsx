@@ -11,20 +11,23 @@ const App = () => {
   const countRef = useRef();
 
   const preCount = useRef();
-
+/**Lưu giá trị hiện tại của biến count vào biến preCount.current khi biến Count thay đổi
+*/
   useEffect(() => {
     preCount.current = count;
-  }, [count]);
+  }, [count]);/**Chỉ thực thi lại khi giá trị của count thay đổi. */
 
-  // const ref = useRef();
-  // useEffect(() => {
-  //   ref.current.focus();
-  // }, []);
-
+ /**kiểm tra giá trị của countRef.current */
   const handleStart = () => {
+    /**Nếu countRef.current đã tồn tại,tức là có giá trị khác null or
+     * undefined thì dừng lại ko làm gì hết
+    */
     if( countRef.current) {
       return
     }
+    /**Còn countRef.current vẫn còn giá trị null or undefined thì thực hiện
+     * hàm sau
+      */
     countRef.current = setInterval(() => {
       setCount((prevCount) => prevCount - 1);
     }, 1000);
@@ -46,7 +49,7 @@ const App = () => {
       <h1>{count}</h1>
       <button onClick={handleStart}>Start</button>
       <button onClick={handleStop}>Stop</button>
-      <input type="text"  />
+     
     </Fragment>
   );
 };
