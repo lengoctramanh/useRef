@@ -3,8 +3,7 @@ import { Fragment, useState, useRef, useEffect } from "react";
 const Test2 = () => {
   const [value, setValue] = useState(0);
   const preValueRef = useRef();
-  /**useEffect được sử dụng để theo dõi sự thay đổi của biến value và
-   * lưu giá trị trước đó của value vào preValueRef.current. */
+  /**useEffect được sử dụng để theo dõi sự thay đổi của biến value */
   useEffect(() => {
     preValueRef.current = value;
     {
